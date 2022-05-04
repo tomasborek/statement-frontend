@@ -5,7 +5,8 @@ const Logo = ({ width, opacity, absolute, center, z }) => {
     <img
       src="/img/logo/osmicka.svg"
       alt="eight"
-      className={`max-w-[${width}px] w-full opacity-${opacity} z-${z} ${
+      style={{ maxWidth: width }}
+      className={`w-full opacity-${opacity} z-${z} ${
         absolute ? "absolute top-0 bottom-0 w-full" : ""
       } ${center ? "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" : ""}`}
     />

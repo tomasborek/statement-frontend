@@ -7,7 +7,6 @@ import Banner from "../components/Banner";
 import Services from "../components/Services";
 import Footer from "../components/Footer";
 import WhyUs from "../components/WhyUs";
-import { useNav } from "../contexts/NavContext";
 
 export default function Home() {
   const servicesRef = useRef(null);
