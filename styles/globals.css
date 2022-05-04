@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+body {
+  font-family: "Exo 2", sans-serif !important;
+} */
+
+.main-container {
+  @apply w-full px-4 max-w-[1100px] mx-auto relative;
+}
+
+.green-shadow {
+  @apply drop-shadow-[0_4px_20px_rgba(19,169,72)];
+}
+
+* {
+  @apply selection:bg-lightGreenLowOpacity;
+}
+
+.black-gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7847514005602241) 14%,
+    rgba(15, 15, 15, 0.025647759103641476) 82%
+  );
+}
+
+.green-gradient {
+  background: rgb(20, 117, 54);
+  background: linear-gradient(
+    41deg,
+    rgba(20, 117, 54, 1) -20%,
+    rgba(18, 18, 18, 1) 38%
+  );
+}
