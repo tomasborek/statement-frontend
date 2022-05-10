@@ -47,7 +47,7 @@ const Banner = ({ scrollToRef }) => {
       <div className="black-gradient absolute top-0 bottom-0 left-0 right-0"></div>
       <video
         ref={bannerContentRef}
-        src="/video/video (3).mp4"
+        src="/video/planeta.mp4"
         autoPlay
         loop
         muted

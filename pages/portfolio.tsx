@@ -4,10 +4,10 @@ import Header from "../components/Header";
 import Logo from "../components/Logo";
 const Portfolio = () => {
   return (
-    <div className="bg-bg min-h-screen text-white">
+    <div className="bg-bg min-h-screen text-white green-gradient">
       <Header />
-      <div className="green-gradient absolute top-0 bottom-0 left-0 right-0"></div>
-      <div className="main-container">
+      {/* <div className="green-gradient absolute top-0 bottom-0 left-0 right-0 min-h-screen"></div> */}
+      <div className="main-container min-h-screen">
         <div className="relative py-14 my-8">
           <Logo absolute center z={10} />
           <h2 className="text-3xl relative w-fu text-center z-20">
