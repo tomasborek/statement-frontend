@@ -7,7 +7,7 @@ const WhyUs = () => {
   return (
     <section className="my-12">
       <h2 className="font-bold text-3xl text-center mb-4">
-        Proč zrovna statement
+        Proč zrovna statements
       </h2>
       <p className="text-center mb-8 text-proseText">
         Víme, jaké to je, stát v krušných začátcích a tvrdě pracovat na svých

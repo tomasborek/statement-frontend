@@ -10,7 +10,7 @@ const Footer = () => {
 
         <div className="flex">
           <div className="flex-1">
-            <h3 className="font-bold mb-2">O statementu</h3>
+            <h3 className="font-bold mb-2">O statements</h3>
             <p className="text-sm text-proseText">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Voluptatum rem sed suscipit voluptatem tenetur explicabo cum
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
         <div className="flex justify-center mt-8">
           <p className="text-sm text-proseText">
-            Statement 2022 &copy; Všechna práva vyhrazena
+            Statements 2022 &copy; Všechna práva vyhrazena
           </p>
         </div>
       </div>

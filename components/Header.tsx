@@ -21,7 +21,7 @@ const Header = ({ absolute }) => {
             onClick={() => setNavOpen(false)}
             className="text-3xl font-extralight cursor-pointer"
           >
-            statement
+            statements
           </h2>
         </Link>
       </div>
