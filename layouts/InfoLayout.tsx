@@ -8,36 +8,42 @@ import Head from "next/head";
 import TeamMember from "../components/TeamMember";
 import Link from "next/link";
 
-const InfoLayout = (props) => {
-  const { sections, bannerItems, checkList, expert } = props.content;
+const InfoLayout = ({ content }) => {
+  const {
+    title,
+    description,
+    title2,
+    description2,
+    expert,
+    checkListTitle,
+    checkListDescription,
+    checkListFields,
+    bannerItems,
+  } = content.fields;
   return (
     <>
       <Head>
-        <title>{sections[0].heading} | Statement</title>
+        <title>{title} | Statement</title>
       </Head>
       <div className="bg-bg min-h-screen relative text-white green-gradient">
         <Header />
         <div className="main-container">
           <section className="mt-8 mb-12 text-">
-            <h1 className="text-5xl font-bold text-center mb-8">
-              {sections[0].heading}
-            </h1>
-            <p className="text-proseText text-center">
-              {sections[0].description}
-            </p>
+            <h1 className="text-5xl font-bold text-center mb-8">{title}</h1>
+            <p className="text-proseText text-center">{description}</p>
           </section>
 
           <section className="my-12 relative">
             <h2 className="relative z-20 text-3xl font-bold text-center mb-4">
-              {sections[1].heading}
+              {title2}
             </h2>
             <p className="relative z-20 text-center mb-8 text-proseText">
-              {sections[1].description}
+              {description2}
             </p>
             <div className="flex items-center justify-center divide-x-[1px] divide-lightGreenLowOpacity">
-              {bannerItems.map((item, index) => (
+              {bannerItems.items.map((item, index) => (
                 <BannerItem
-                  svg={item.svg ? item.svg : null}
+                  svg={item.icon == "svg" ? "img/code-circle.svg" : null}
                   icon={item.icon ? item.icon : null}
                   heading={item.heading}
                   description={item.description}
@@ -46,19 +52,19 @@ const InfoLayout = (props) => {
               ))}
             </div>
           </section>
-          {checkList && (
+          {checkListFields && (
             <section className="my-12 ">
               <h2 className="font-bold text-3xl text-center mb-4">
-                {checkList.heading}
+                {checkListTitle}
               </h2>
               <ul className="flex flex-col items-center space-y-4 list-none p-0">
-                {checkList.items.map((item, index) => (
+                {checkListFields.items.map((item, index) => (
                   <Step key={index}>{item}</Step>
                 ))}
               </ul>
-              {checkList.description && (
+              {checkListDescription && (
                 <p className="font-extralight text-proseText text-center mt-4">
-                  {checkList.description}
+                  {checkListDescription}
                 </p>
               )}
             </section>

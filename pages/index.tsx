@@ -7,8 +7,9 @@ import Banner from "../components/Banner";
 import Services from "../components/Services";
 import Footer from "../components/Footer";
 import WhyUs from "../components/WhyUs";
+import { getServices } from "../lib/api";
 
-export default function Home() {
+export default function Home({ services }) {
   const servicesRef = useRef(null);
   return (
     <>
@@ -18,7 +19,7 @@ export default function Home() {
       <div className="bg-bg min-h-screen text-white ">
         <Header absolute />
         <Banner scrollToRef={servicesRef} />
-        <Services servicesRef={servicesRef} />
+        <Services services={services} />
         <div className="main-container">
           <WhyUs />
         </div>
@@ -26,4 +27,14 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const services = await getServices();
+
+  return {
+    props: {
+      services,
+    },
+  };
 }
