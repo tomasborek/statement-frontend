@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center space-x-4 transition-all hover:text-lightGreen cursor-pointer">
               <i className="fas fa-envelope"></i>
-              <p>info@statements.cz</p>
+              <p>pavelhasek00@email.cz</p>
             </div>
           </div>
         </div>
