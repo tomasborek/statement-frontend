@@ -6,7 +6,7 @@ const Portfolio = () => {
   return (
     <div className="bg-bg min-h-screen text-white green-gradient">
       <Header />
-     
+
       <div className="main-container min-h-screen">
         <div className="relative py-14 my-8">
           <Logo absolute center z={10} />
@@ -15,7 +15,7 @@ const Portfolio = () => {
           </h2>
         </div>
         <h2 className="text-3xl font-bold mb-4">Naše projekty</h2>
-        <div className="grid grid-cols-3 gap-4 mb-4">
+        <div className="grid grid-cols-3 gap-4 mb-8">
           <Project
             img={"/img/roomie-project.png"}
             projectName={"Roomie"}
@@ -32,7 +32,6 @@ const Portfolio = () => {
             description={"Learningový portál"}
           />
         </div>
-        <h2 className="text-3xl font-bold mb-4">Projekty vytvořené pro Vás</h2>
       </div>
       <Footer />
     </div>

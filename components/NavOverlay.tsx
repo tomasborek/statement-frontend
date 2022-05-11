@@ -19,6 +19,7 @@ const NavOverlay = () => {
             content={"O nás"}
             link="/portfolio"
           />
+          <NavItem icon={"phone"} content={"Kontakt"} link="/kontakt" />
           <NavItem icon={"users"} content={"Tým"} link="/team" />
           <NavItem icon={"book"} content={"Naše projekty"} link="/portfolio" />
           <NavItem icon={"globe"} content={"Chci web"} link="/web" />
