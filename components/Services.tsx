@@ -14,6 +14,7 @@ const Services = ({ services }) => {
               name={service.fields.title}
               description={service.fields.description}
               link={service.fields.link}
+              key={index}
             />
           ))}
         </div>
