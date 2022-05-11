@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import SocialIcon from "./SocialIcon";
 
@@ -20,13 +21,13 @@ const Footer = () => {
             <h3 className="font-bold mb-2">Navigace</h3>
             <ul className="">
               <li className="transition-all hover:text-lightGreen">
-                <a href="#">O nás</a>
+                <Link href="/o-nas">O nás</Link>
               </li>
               <li className="transition-all hover:text-lightGreen">
-                <a href="#">Služby</a>
+                <Link href="/team">Tým</Link>
               </li>
               <li className="transition-all hover:text-lightGreen">
-                <a href="#">Kontakt</a>
+                <Link href="/kontekt">Kontakt</Link>
               </li>
             </ul>
           </div>
@@ -39,11 +40,11 @@ const Footer = () => {
             </div>
             <div className="flex items-center space-x-4 transition-all hover:text-lightGreen cursor-pointer">
               <i className="fas fa-phone"></i>
-              <p>+420 731 011 045</p>
+              <p>(+420) 737 951 560</p>
             </div>
             <div className="flex items-center space-x-4 transition-all hover:text-lightGreen cursor-pointer">
               <i className="fas fa-envelope"></i>
-              <p>statement@email.cz</p>
+              <p>info@statements.cz</p>
             </div>
           </div>
         </div>
