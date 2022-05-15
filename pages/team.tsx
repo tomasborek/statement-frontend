@@ -21,7 +21,7 @@ const Team = () => {
           <TeamMember
             name={"Pavel Hašek"}
             img={"pavel_team_holo.png"}
-            description={"Městská krysa"}
+            description={"Marketing specialista"}
             resize
           />
           <TeamMember
