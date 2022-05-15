@@ -2,9 +2,9 @@ import React from "react";
 //next
 import Link from "next/link";
 
-const Services = ({ services }) => {
+const Services = ({ services, scrollToRef }) => {
   return (
-    <div className="mt-8">
+    <div ref={scrollToRef} className="mt-8">
       <div className="main-container text-white">
         <h3 className="text-2xl font-bold">Co vám můžeme nabídnout</h3>
         <div className="flex flex-col items-stretch md:grid md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-4 mt-8">

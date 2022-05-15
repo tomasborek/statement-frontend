@@ -19,7 +19,7 @@ export default function Home({ services }) {
       <div className="bg-bg min-h-screen text-white ">
         <Header absolute />
         <Banner scrollToRef={servicesRef} />
-        <Services services={services} />
+        <Services services={services} scrollToRef={servicesRef} />
         <div className="main-container">
           <WhyUs />
         </div>
