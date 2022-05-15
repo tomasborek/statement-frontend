@@ -14,7 +14,7 @@ export default function Home({ services }) {
   return (
     <>
       <Head>
-        <title>Statement</title>
+        <title>Statements</title>
       </Head>
       <div className="bg-bg min-h-screen text-white ">
         <Header absolute />
