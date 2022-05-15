@@ -12,8 +12,8 @@ const Header = ({ absolute }) => {
         absolute ? "absolute" : "relative"
       } top-0 w-full z-40 border-b-[1px] text-white border-gray-700`}
     >
-      <div className="main-container items-center flex justify-center py-4 ">
-        <div className="absolute left-0">
+      <div className="main-container items-center flex justify-center p-4 ">
+        <div className="absolute left-0 pl-4">
           <Hamburger toggled={navOpen} toggle={setNavOpen} rounded />
         </div>
         <Link href="/">

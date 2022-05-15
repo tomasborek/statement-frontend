@@ -40,7 +40,7 @@ const InfoLayout = ({ content }) => {
             <p className="relative z-20 text-center mb-8 text-proseText">
               {description2}
             </p>
-            <div className="flex items-center justify-center divide-x-[1px] divide-lightGreenLowOpacity">
+            <div className="md:flex items-center justify-center md:divide-x-[1px] md:divide-lightGreenLowOpacity">
               {bannerItems.items.map((item, index) => (
                 <BannerItem
                   svg={item.icon == "svg" ? "img/code-circle.svg" : null}

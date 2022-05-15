@@ -99,7 +99,7 @@ const ContactForm = () => {
           state.submitting ? "opacity-50" : ""
         }`}
       >
-        <div className="grid grid-cols-2 grid-rows-5 gap-x-4 gap-y-2 mb-4">
+        <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-5 gap-x-4 gap-y-2 mb-4">
           <div className="mb-2 ">
             <p className="text-sm mb-1">Jméno*</p>
             <input

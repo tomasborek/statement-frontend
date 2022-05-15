@@ -13,12 +13,8 @@ const NavOverlay = () => {
     >
       <div className="green-gradient absolute top-0 bottom-0 w-full z-10"></div>
       <div className="flex justify-center items-center relative h-screen z-20">
-        <ul className="text-4xl font-extralight flex flex-col space-y-8">
-          <NavItem
-            icon={"magnifying-glass"}
-            content={"O nás"}
-            link="/portfolio"
-          />
+        <ul className="text-4xl font-extralight flex flex-col space-y-8 px-4">
+          <NavItem icon={"magnifying-glass"} content={"O nás"} link="/wip" />
           <NavItem icon={"phone"} content={"Kontakt"} link="/kontakt" />
           <NavItem icon={"users"} content={"Tým"} link="/team" />
           <NavItem icon={"book"} content={"Naše projekty"} link="/wip" />

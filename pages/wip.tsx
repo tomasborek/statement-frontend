@@ -8,7 +8,7 @@ const Wip = () => {
       <Header />
       <div className="main-container">
         <div className="w-full flex justify-center mt-12">
-          <Logo width={400} />
+          <Logo width={"100%"} />
         </div>
         <h2 className="font-bold mt-8 text-3xl text-center">Připravuje se</h2>
       </div>

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="main-container">
         <h2 className="text-2xl font-extralight text-center mb-4">STATEMENT</h2>
 
-        <div className="flex">
+        <div className="md:flex space-y-4 md:space-y-0">
           <div className="flex-1">
             <h3 className="font-bold mb-2">O statements</h3>
             <p className="text-sm text-proseText">
@@ -21,7 +21,7 @@ const Footer = () => {
               a cílech.
             </p>
           </div>
-          <div className="flex flex-col items-center flex-1">
+          <div className="flex flex-col md:items-center flex-1">
             <h3 className="font-bold mb-2">Navigace</h3>
             <ul className="">
               <li className="transition-all hover:text-lightGreen">
@@ -35,9 +35,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col items-center space-y-2 flex-1">
+          <div className="flex flex-col md:items-center space-y-2 flex-1">
             <h3 className="font-bold mb-2">Spojte se s námi</h3>
-            <div className="flex items-center justify-center space-x-8">
+            <div className="flex items-center md:justify-center space-x-8">
               <SocialIcon type="facebook" size="xl" />
               <SocialIcon
                 type="instagram"
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex justify-center mt-8">
-          <p className="text-sm text-proseText">
+          <p className="text-sm text-proseText text-center">
             Statements 2022 &copy; Všechna práva vyhrazena
           </p>
         </div>
