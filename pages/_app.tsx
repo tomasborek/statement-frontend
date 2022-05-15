@@ -18,6 +18,11 @@ function MyApp({ Component, pageProps }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/img/logo/osmicka.svg"
+        ></link>
       </Head>
       <NavProvider>
         <LayoutWrapper>

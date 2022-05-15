@@ -12,9 +12,13 @@ const Footer = () => {
           <div className="flex-1">
             <h3 className="font-bold mb-2">O statements</h3>
             <p className="text-sm text-proseText">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatum rem sed suscipit voluptatem tenetur explicabo cum
-              assumenda exercitationem repellendus non.
+              Naše práce je zároveň i náš koníček, proto se vše snažíme
+              dotáhnout do detailu a hlavně tak, abyste Vy byli maximálně
+              spokojeni. Jsme mladí kluci a na vše se díváme moderním a trendy
+              stylem - z on-line světa nám nic neunikne! S náročnějšími problémy
+              se radíme s experty napříč celým profesním polem. Zkuste nám dát
+              šanci a můžeme si společně a nezavázně promluvit o Vašich ambicích
+              a cílech.
             </p>
           </div>
           <div className="flex flex-col items-center flex-1">
@@ -27,7 +31,7 @@ const Footer = () => {
                 <Link href="/team">Tým</Link>
               </li>
               <li className="transition-all hover:text-lightGreen">
-                <Link href="/kontekt">Kontakt</Link>
+                <Link href="/kontakt">Kontakt</Link>
               </li>
             </ul>
           </div>
@@ -35,7 +39,11 @@ const Footer = () => {
             <h3 className="font-bold mb-2">Spojte se s námi</h3>
             <div className="flex items-center justify-center space-x-8">
               <SocialIcon type="facebook" size="xl" />
-              <SocialIcon type="instagram" size="xl" />
+              <SocialIcon
+                type="instagram"
+                size="xl"
+                link={"https://www.instagram.com/statements.cz/"}
+              />
               <SocialIcon type="linkedin" size="xl" />
             </div>
             <div className="flex items-center space-x-4 transition-all hover:text-lightGreen cursor-pointer">

@@ -32,11 +32,15 @@ const Kontakt = () => {
             </div>
             <div className="flex items-center space-x-4">
               <i className="fas fa-envelope"></i>
-              <p className="text-lightGreen underline">hovnoprdel@gmail.com</p>
+              <p className="text-lightGreen underline">info@statements.cz</p>
             </div>
           </div>
           <div className="flex items-center justify-center space-x-8 text-2xl mb-8">
-            <SocialIcon type={"instagram"} size={"2xl"} />
+            <SocialIcon
+              type={"instagram"}
+              size={"2xl"}
+              link="https://www.instagram.com/statements.cz/"
+            />
             <SocialIcon type={"facebook"} size={"2xl"} />
             <SocialIcon type={"linkedin"} size={"2xl"} />
           </div>

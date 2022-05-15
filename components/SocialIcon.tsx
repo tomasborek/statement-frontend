@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-const SocialIcon = ({ type, size, glowy }) => {
+const SocialIcon = ({ type, size, glowy, link }) => {
   return (
-    <Link href={"https://instagram.com"} passHref>
+    <Link href={link} passHref>
       <a target={"_blank"}>
         <i
           className={`fab fa-${type} text-${size} cursor-pointer ${
@@ -19,6 +19,7 @@ const SocialIcon = ({ type, size, glowy }) => {
 
 SocialIcon.defaultProps = {
   glowy: false,
+  link: "https://instagram.com/statements.cz",
 };
 
 export default SocialIcon;

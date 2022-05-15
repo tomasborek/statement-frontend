@@ -21,7 +21,7 @@ const NavOverlay = () => {
           />
           <NavItem icon={"phone"} content={"Kontakt"} link="/kontakt" />
           <NavItem icon={"users"} content={"Tým"} link="/team" />
-          <NavItem icon={"book"} content={"Naše projekty"} link="/portfolio" />
+          <NavItem icon={"book"} content={"Naše projekty"} link="/wip" />
           <NavItem icon={"globe"} content={"Chci web"} link="/web" />
         </ul>
       </div>
