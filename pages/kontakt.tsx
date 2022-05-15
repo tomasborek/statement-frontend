@@ -28,7 +28,7 @@ const Kontakt = () => {
           <div className="space-y-2 flex flex-col items-center mb-4">
             <div className="flex items-center space-x-4">
               <i className="fas fa-phone"></i>
-              <p className="text-lightGreen">(+420) 731 011 045</p>
+              <p className="text-lightGreen">(+420) 737 951 560</p>
             </div>
             <div className="flex items-center space-x-4">
               <i className="fas fa-envelope"></i>
