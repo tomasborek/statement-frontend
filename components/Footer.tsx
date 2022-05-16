@@ -6,7 +6,9 @@ const Footer = () => {
   return (
     <footer className="relative py-8 mt-8 border-t-[1px] border-t-grayBg bg-bg z-40">
       <div className="main-container">
-        <h2 className="text-2xl font-extralight text-center mb-4">STATEMENT</h2>
+        <h2 className="text-2xl font-extralight text-center mb-4">
+          STATEMENTS
+        </h2>
 
         <div className="md:flex space-y-4 md:space-y-0">
           <div className="flex-1">
@@ -25,13 +27,13 @@ const Footer = () => {
             <h3 className="font-bold mb-2">Navigace</h3>
             <ul className="">
               <li className="transition-all hover:text-lightGreen">
-                <Link href="/o-nas">O nás</Link>
-              </li>
-              <li className="transition-all hover:text-lightGreen">
                 <Link href="/team">Tým</Link>
               </li>
               <li className="transition-all hover:text-lightGreen">
                 <Link href="/kontakt">Kontakt</Link>
+              </li>
+              <li className="transition-all hover:text-lightGreen">
+                <Link href="/wip">Naše projekty</Link>
               </li>
             </ul>
           </div>
@@ -52,7 +54,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center space-x-4 transition-all hover:text-lightGreen cursor-pointer">
               <i className="fas fa-envelope"></i>
-              <p>pavelhasek00@email.cz</p>
+              <p>info@statements.cz</p>
             </div>
           </div>
         </div>
