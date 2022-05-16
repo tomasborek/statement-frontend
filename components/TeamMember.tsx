@@ -4,7 +4,7 @@ const TeamMember = ({ name, description, img, resize }) => {
   console.log(resize);
   return (
     <div
-      className={`group cursor-pointer flex flex-col justify-end opacity-50 hover:opacity-100 relative w-[250px] ${
+      className={`group cursor-pointer flex flex-col justify-end opacity-50 hover:opacity-100 relative w-[250px] min-w-[250px] ${
         resize ? "hover:w-[300px]" : ""
       } transition-all duration-500 ${resize ? "pt-[50px] hover:pt-0" : ""}`}
     >
