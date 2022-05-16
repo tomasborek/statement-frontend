@@ -50,12 +50,14 @@ const Banner = ({ scrollToRef }) => {
       <div className="w-full absolute top-0 left-0 bottom-0 z-10 green-gradient"></div>
       <div className="black-gradient absolute top-0 bottom-0 left-0 right-0"></div>
       <video
+        playsInline
+        webkit-playsInline
         ref={bannerContentRef}
         src="/video/planeta.mp4"
         autoPlay
         loop
         muted
-        className="w-full object-cover h-full absolute  opacity-10 z-10"
+        className="w-full select-none object-cover h-full absolute  opacity-10 z-10"
       ></video>
       {/*Triangle*/}
       {/* <div className=" w-0 h-0 border-b-[100px] border-r-[50vw] border-l-[50vw] border-t-0 border-r-transparent border-l-transparent border-bg z-20"></div> */}
