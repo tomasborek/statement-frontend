@@ -35,7 +35,7 @@ const Banner = ({ scrollToRef }) => {
         </div>
         <h1 className="text-5xl text-center mb-4">Vize jsou nekonečné</h1>
         <h3 className="text-2xl text-center mb-8 font-extralight">
-          Pomůžeme Vám je naplnit
+          Pomůžeme vám je naplnit
         </h3>
         <GlowingButton
           handleClick={() => {
