@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Footer from "../components/Footer";
+import Head from "next/head";
 //Components
 import Header from "../components/Header";
 import NormalButton from "../components/NormalButton";
@@ -10,61 +11,66 @@ import { useForm, ValidationError } from "@formspree/react";
 const Kontakt = () => {
   const formRef = useRef(null);
   return (
-    <div className="relative bg-bg text-white min-h-screen">
-      <div className="absolute top-0 bottom-0 w-full green-gradient"></div>
-      <Header />
-      <div className="main-container relative mt-12">
-        <div className="relative py-14 mb-8">
-          <img
-            src="/img/logo/osmicka.svg"
-            alt="eight"
-            className="max-w-[300px] w-full opacity-40 mb-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-          />
-          <h1 className="relative text-5xl text-center z-20">Kontakt</h1>
-        </div>
-        <div className="bg-grayBg rounded-lg p-8 flex flex-col items-center mb-8">
-          <i className="far fa-comment text-lightGreen text-5xl mb-2"></i>
-          <h2 className="text-3xl text-center mb-4">Spojte se s námi</h2>
-          <div className="space-y-2 flex flex-col items-center mb-4">
-            <div className="flex items-center space-x-4">
-              <i className="fas fa-phone"></i>
-              <p className="text-lightGreen">(+420) 737 951 560</p>
-            </div>
-            <div className="flex items-center space-x-4">
-              <i className="fas fa-envelope"></i>
-              <p className="text-lightGreen underline">info@statements.cz</p>
-            </div>
-          </div>
-          <div className="flex items-center justify-center space-x-8 text-2xl mb-8">
-            <SocialIcon
-              type={"instagram"}
-              size={"2xl"}
-              link="https://www.instagram.com/statements.cz/"
+    <>
+      <Head>
+        <title>Kontakt | Statements</title>
+      </Head>
+      <div className="relative bg-bg text-white min-h-screen">
+        <div className="absolute top-0 bottom-0 w-full green-gradient"></div>
+        <Header />
+        <div className="main-container relative mt-12">
+          <div className="relative py-14 mb-8">
+            <img
+              src="/img/logo/osmicka.svg"
+              alt="eight"
+              className="max-w-[300px] w-full opacity-40 mb-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
             />
-            <SocialIcon type={"facebook"} size={"2xl"} />
-            <SocialIcon type={"linkedin"} size={"2xl"} />
+            <h1 className="relative text-5xl text-center z-20">Kontakt</h1>
           </div>
+          <div className="bg-grayBg rounded-lg p-8 flex flex-col items-center mb-8">
+            <i className="far fa-comment text-lightGreen text-5xl mb-2"></i>
+            <h2 className="text-3xl text-center mb-4">Spojte se s námi</h2>
+            <div className="space-y-2 flex flex-col items-center mb-4">
+              <div className="flex items-center space-x-4">
+                <i className="fas fa-phone"></i>
+                <p className="text-lightGreen">(+420) 737 951 560</p>
+              </div>
+              <div className="flex items-center space-x-4">
+                <i className="fas fa-envelope"></i>
+                <p className="text-lightGreen underline">info@statements.cz</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center space-x-8 text-2xl mb-8">
+              <SocialIcon
+                type={"instagram"}
+                size={"2xl"}
+                link="https://www.instagram.com/statements.cz/"
+              />
+              <SocialIcon type={"facebook"} size={"2xl"} />
+              <SocialIcon type={"linkedin"} size={"2xl"} />
+            </div>
 
-          <NormalButton
-            handleClick={() => {
-              formRef.current.scrollIntoView({ behavior: "smooth" });
-            }}
+            <NormalButton
+              handleClick={() => {
+                formRef.current.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Chci se sejít!
+            </NormalButton>
+          </div>
+          <div
+            ref={formRef}
+            className="bg-grayBg rounded-lg p-8 flex flex-col items-center"
           >
-            Chci se sejít!
-          </NormalButton>
+            <i className="far fa-envelope-open text-lightGreen text-5xl mb-2"></i>
+            <h2 className="text-3xl mb-4">Napište nám</h2>
+            <ContactForm />
+          </div>
+          <WhyUs />
         </div>
-        <div
-          ref={formRef}
-          className="bg-grayBg rounded-lg p-8 flex flex-col items-center"
-        >
-          <i className="far fa-envelope-open text-lightGreen text-5xl mb-2"></i>
-          <h2 className="text-3xl mb-4">Napište nám</h2>
-          <ContactForm />
-        </div>
-        <WhyUs />
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
