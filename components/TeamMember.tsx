@@ -16,13 +16,15 @@ const TeamMember = ({ name, description, img, resize }) => {
       </div>
       <div className="flex-1 flex justify-center px-4">
         <img
+          draggable={"false"}
           src={`./img/team/${img}`}
-          className="group-hover:-translate-y-20  transition-all duration-500 w-full h-auto"
+          className="group-hover:-translate-y-20 select-none  transition-all duration-500 w-full h-auto"
           alt={name}
         />
         <img
+          draggable={"false"}
           src="./img/team/hologram.png"
-          className="opacity-0 group-hover:opacity-50 absolute w-full bottom-0  transition-all duration-1000 "
+          className="opacity-0 select-none group-hover:opacity-50 absolute w-full bottom-0  transition-all duration-1000 "
           alt=""
         />
       </div>

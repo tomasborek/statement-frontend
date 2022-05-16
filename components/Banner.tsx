@@ -2,6 +2,7 @@ import { getEventListeners } from "events";
 import React, { useEffect, useRef } from "react";
 //Components
 import GlowingButton from "./GlowingButton";
+import Logo from "./Logo";
 
 const Banner = ({ scrollToRef }) => {
   const bannerContentRef = useRef(null);
@@ -24,11 +25,14 @@ const Banner = ({ scrollToRef }) => {
   return (
     <div className="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden">
       <div className="relative z-20 w-full flex flex-col items-center justify-center flex-1">
-        <img
-          src="/img/logo/osmicka.svg"
-          alt="eight"
-          className="max-w-[400px] w-full px-4 opacity-50 mb-8"
-        />
+        <div className="relative w-full px-4 mb-8 flex justify-center">
+          {/* <img
+            src="/img/logo/osmicka.svg"
+            alt="eight"
+            className="max-w-[400px] w-full px-4 opacity-50 mb-8"
+          /> */}
+          <Logo width={400} />
+        </div>
         <h1 className="text-5xl text-center mb-4">Vize jsou nekonečné</h1>
         <h3 className="text-2xl text-center mb-8 font-extralight">
           Pomůžeme Vám je naplnit
