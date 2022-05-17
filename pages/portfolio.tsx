@@ -2,52 +2,48 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Logo from "../components/Logo";
+import LogoHeading from "../components/LogoHeading";
 const Portfolio = () => {
   return (
     <div className="bg-bg min-h-screen text-white green-gradient">
       <Header />
-
-      <div className="main-container min-h-screen">
-        <div className="relative py-14 my-8">
-          <Logo absolute center z={10} />
-          <h2 className="text-3xl relative w-fu text-center z-20">
-            Naše projekty
-          </h2>
-        </div>
-        <h2 className="text-3xl font-bold mb-4">Naše projekty</h2>
-        <div className="grid grid-cols-3 gap-4 mb-8">
-          <Project
-            img={"/img/roomie-project.png"}
-            projectName={"Roomie"}
-            description={"Moderní sociální síť pro hledání spolubydlení"}
-          />
-          <Project
-            img={"/img/roomie-project.png"}
-            projectName={"Athenio"}
-            description={"Learningový portál"}
-          />
-          <Project
-            img={"/img/roomie-project.png"}
-            projectName={"Athenio"}
-            description={"Learningový portál"}
-          />
-        </div>
+      <LogoHeading>Portfolio</LogoHeading>
+      <div className="main-container">
+        <Project
+          name={"Roomie"}
+          description={
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus luctus egestas leo. Aliquam erat volutpat. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Nam quis nulla. Curabitur bibendum justo non orci. Nullam at arcu a est sollicitudin euismod. Vestibulum fermentum tortor id mi. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Mauris metus. Aliquam in lorem sit amet leo accumsan lacinia. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Phasellus enim erat, vestibulum vel,"
+          }
+          img={"roomie.png"}
+        />
       </div>
       <Footer />
     </div>
   );
 };
 
-const Project = ({ img, projectName, description }) => {
+const Project = ({ img, name, description, alternative }) => {
   return (
-    <div className="cursor-pointer shadow-lg rounded-lg overflow-hidden bg-grayBg">
-      <img src={img} alt="" className="opacity-70" />
-      <div className="p-4 bg-grayBg text-white">
-        <h3 className="font-bold ">{projectName}</h3>
-        <p className="text-sm text-proseText">{description}</p>
+    <div
+      className={`flex items-center ${alternative ? "flex-row-reverse" : ""}`}
+    >
+      <div>
+        <h2 className="font-bold text-2xl">{name}</h2>
+        <p className="text-proseText">{description}</p>
+      </div>
+      <div>
+        <img
+          src={`img/projects/${img}`}
+          className="max-w-[500px] w-[500px] h-[500px] object-cover"
+          alt={name}
+        />
+        <div></div>
       </div>
     </div>
   );
+};
+Project.defaultProps = {
+  alternative: false,
 };
 
 export default Portfolio;
