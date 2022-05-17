@@ -51,7 +51,6 @@ const Banner = ({ scrollToRef }) => {
       <div className="black-gradient absolute top-0 bottom-0 left-0 right-0"></div>
       <video
         playsInline
-        webkit-playsInline
         ref={bannerContentRef}
         src="/video/planeta.mp4"
         autoPlay
