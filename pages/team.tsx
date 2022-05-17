@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Header from "../components/Header";
 import WhyUs from "../components/WhyUs";
 import Footer from "../components/Footer";
@@ -35,11 +35,13 @@ const Team = () => {
             </h1>
           </header>
           {/* Team people */}
-          <div className="overflow-hidden main-container">
+          <motion.div className="overflow-hidden main-container">
             <motion.div
               {...(vw < 700 ? { drag: "x" } : {})}
-              dragConstraints={{ right: -250, left: 250 }}
-              className="flex relative z-20 justify-center"
+              dragConstraints={{ right: 0, left: -500 }}
+              className={`flex relative z-20 ${
+                vw >= 700 ? "justify-center" : ""
+              }`}
             >
               <TeamMember
                 name={"Pavel Hašek"}
@@ -60,7 +62,7 @@ const Team = () => {
                 resize
               />
             </motion.div>
-          </div>
+          </motion.div>
 
           <div className="green-gradient absolute bottom-0 top-0 w-full z-10"></div>
         </div>
