@@ -33,6 +33,11 @@ const Team = () => {
             <h1 className="relative px-4 mb-4 text-center text-5xl z-20">
               Tým Statement
             </h1>
+            {vw < 700 && (
+              <h3 className="text-xl opacity-40 text-proseText text-center mb-4">
+                Klikněte na člena
+              </h3>
+            )}
           </header>
           {/* Team people */}
           <motion.div className="relative overflow-hidden main-container">
@@ -63,7 +68,7 @@ const Team = () => {
                 resize
               />
               <TeamMember
-                name={"Josef Hemroch"}
+                name={"Josef Hermoch"}
                 img={"joe_team_holo.png"}
                 description={"IT specialista"}
                 resize
