@@ -28,14 +28,21 @@ const Team = () => {
       <div className="bg-bg min-h-screen text-white">
         <Header />
         {/* Bannner */}
-        <div className="relative pt-8 flex flex-col justify-between min-h-[600px] mb-8">
+        <div className="relative pt-8 flex flex-col justify-between min-h-[600px] mb-8 green-gradient">
           <header>
-            <h1 className="relative px-4 text-center text-5xl z-20">
+            <h1 className="relative px-4 mb-4 text-center text-5xl z-20">
               Tým Statement
             </h1>
           </header>
           {/* Team people */}
-          <motion.div className="overflow-hidden main-container">
+          <motion.div className="relative overflow-hidden main-container">
+            {vw < 700 && (
+              <div className="right-0 left-0 top-1/2 absolute flex justify-between text-lightGreen text-xl px-4 pointer-events-none">
+                <i className="fa-solid fa-chevron-left"></i>
+                <i className="fa-solid fa-chevron-right"></i>
+              </div>
+            )}
+
             <motion.div
               {...(vw < 700 ? { drag: "x" } : {})}
               dragConstraints={{ right: 0, left: -500 }}
@@ -63,8 +70,6 @@ const Team = () => {
               />
             </motion.div>
           </motion.div>
-
-          <div className="green-gradient absolute bottom-0 top-0 w-full z-10"></div>
         </div>
         {/* Banner end */}
         <main>
