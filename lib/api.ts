@@ -11,7 +11,7 @@ export const getServices = async () => {
   return services.items;
 };
 export const getPage = async (link) => {
-  const pageInfo = client.getEntries({
+  const pageInfo = await client.getEntries({
     content_type: "pages",
     "fields.link": link,
   });
