@@ -1,25 +1,26 @@
-const axios = require("axios");
+const contentful = require("contentful");
+const client = contentful.createClient({
+  space: "g4u7tt791g23",
+  accessToken: process.env.AUTH_KEY,
+});
 export const getServices = async () => {
-  const services = await axios.get(
-    "https://cdn.contentful.com/spaces/g4u7tt791g23/entries?content_type=services&order=fields.order",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.AUTH_KEY}`,
-      },
-    }
-  );
-  return services.data.items;
+  const services = await client.getEntries({
+    content_type: "services",
+    order: "fields.order",
+  });
+  return services.items;
 };
-
 export const getPage = async (link) => {
-  const pageData = await axios.get(
-    `https://cdn.contentful.com/spaces/g4u7tt791g23/entries?content_type=pages&fields.link=${link}`,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.AUTH_KEY}`,
-      },
-    }
-  );
-
-  return pageData.data.items[0];
+  const pageInfo = client.getEntries({
+    content_type: "pages",
+    "fields.link": link,
+  });
+  return pageInfo.items[0];
+};
+export const getProjects = async () => {
+  const projects = await client.getEntries({
+    content_type: "project",
+    order: "fields.order",
+  });
+  return projects.items;
 };
