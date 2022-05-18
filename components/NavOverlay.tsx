@@ -16,7 +16,7 @@ const NavOverlay = () => {
         <ul className="text-4xl font-extralight flex flex-col space-y-8 px-4">
           <NavItem icon={"phone"} content={"Kontakt"} link="/kontakt" />
           <NavItem icon={"users"} content={"Tým"} link="/team" />
-          <NavItem icon={"book"} content={"Naše projekty"} link="/wip" />
+          <NavItem icon={"book"} content={"Naše projekty"} link="/portfolio" />
           <NavItem icon={"globe"} content={"Chci web"} link="/web" />
         </ul>
       </div>
