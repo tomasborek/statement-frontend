@@ -1,6 +1,7 @@
 const marked = require("marked");
-const DOMPuirfy = require("dompurify");
+const DOMPurify = require("isomorphic-dompurify");
 //Parse & Purify
 export const pnp = (text) => {
-  return DOMPuirfy.sanitize(marked.parse(text));
+  const parsed = marked.parse(text);
+  return DOMPurify.sanitize(parsed);
 };
