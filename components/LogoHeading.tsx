@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 const LogoHeading = ({ children }) => {
   return (
-    <div className="relative py-14 mb-8">
+    <div className="relative py-14 my-8">
       <img
         src="/img/logo/osmicka.svg"
         alt="eight"

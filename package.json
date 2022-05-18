@@ -12,11 +12,15 @@
     "@formspree/react": "^2.2.4",
     "@tailwindcss/typography": "^0.5.2",
     "axios": "^0.27.2",
+    "contentful": "^9.1.28",
+    "dompurify": "^2.3.8",
     "framer-motion": "^6.2.9",
     "hamburger-react": "^2.5.0",
+    "marked": "^4.0.16",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-intersection-observer": "^9.1.0",
     "typescript": "^4.6.3"
   },
   "devDependencies": {
