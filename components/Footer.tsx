@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col md:items-center flex-1">
             <h3 className="font-bold mb-2">Navigace</h3>
-            <ul className="">
+            <ul className="md:text-center">
               <li className="transition-all hover:text-lightGreen">
                 <Link href="/team">Tým</Link>
               </li>
