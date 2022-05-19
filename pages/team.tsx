@@ -32,7 +32,7 @@ const Team = ({ members }) => {
         {/* Bannner */}
         <div className="relative pt-8 flex flex-col justify-between min-h-[600px] mb-8 green-gradient">
           <header>
-            <h1 className="relative px-4 mb-4 text-center text-5xl z-20">
+            <h1 className="relative px-4 mb-4 text-center text-5xl font-bold z-20">
               Tým Statement
             </h1>
             {vw < 700 && (
@@ -82,6 +82,7 @@ const Team = ({ members }) => {
         <main>
           <div className="main-container">
             <div>
+              <h2 className="text-3xl text-center font-bold mb-4">Náš tým</h2>
               {members.map((member, index) => (
                 <MemberInfo
                   key={index}
@@ -92,7 +93,7 @@ const Team = ({ members }) => {
               ))}
             </div>
             <div className="mt-8">
-              <h2 className="text-3xl text-center">
+              <h2 className="text-3xl text-center font-bold">
                 Sledujte nás na sociálních sítích
               </h2>
               <div className="flex justify-center space-x-8 mt-4 text-lightGreen">
