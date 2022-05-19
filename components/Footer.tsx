@@ -33,14 +33,13 @@ const Footer = () => {
                 <Link href="/kontakt">Kontakt</Link>
               </li>
               <li className="transition-all hover:text-lightGreen">
-                <Link href="/wip">Naše projekty</Link>
+                <Link href="/portfolio">Naše projekty</Link>
               </li>
             </ul>
           </div>
           <div className="flex flex-col md:items-center space-y-2 flex-1">
             <h3 className="font-bold mb-2">Spojte se s námi</h3>
             <div className="flex items-center md:justify-center space-x-8">
-              <SocialIcon type="facebook" size="xl" />
               <SocialIcon
                 type="instagram"
                 size="xl"

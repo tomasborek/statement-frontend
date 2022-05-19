@@ -46,7 +46,6 @@ const Kontakt = () => {
                 size={"2xl"}
                 link="https://www.instagram.com/statements.cz/"
               />
-              <SocialIcon type={"facebook"} size={"2xl"} />
               <SocialIcon type={"linkedin"} size={"2xl"} />
             </div>
 
