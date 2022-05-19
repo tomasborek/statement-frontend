@@ -6,7 +6,9 @@ import SocialIcon from "../components/SocialIcon";
 import { motion } from "framer-motion";
 import TeamMember from "../components/TeamMember";
 import Head from "next/head";
-const Team = () => {
+import { getTeamMembers } from "../lib/api";
+import { pnp } from "../lib/inputs";
+const Team = ({ members }) => {
   const [vw, setVw] = useState(0);
   useEffect(() => {
     setVw(window.innerWidth);
@@ -79,13 +81,25 @@ const Team = () => {
         {/* Banner end */}
         <main>
           <div className="main-container">
-            <h2 className="text-3xl text-center">
-              Sledujte nás na sociálních sítích
-            </h2>
-            <div className="flex justify-center space-x-8 mt-4 text-lightGreen">
-              <SocialIcon type={"facebook"} size={"3xl"} glowy />
-              <SocialIcon type={"instagram"} size={"3xl"} glowy />
-              <SocialIcon type={"linkedin"} size={"3xl"} glowy />
+            <div>
+              {members.map((member, index) => (
+                <MemberInfo
+                  key={index}
+                  name={member.fields.name}
+                  role={member.fields.role}
+                  description={member.fields.description}
+                />
+              ))}
+            </div>
+            <div className="mt-8">
+              <h2 className="text-3xl text-center">
+                Sledujte nás na sociálních sítích
+              </h2>
+              <div className="flex justify-center space-x-8 mt-4 text-lightGreen">
+                <SocialIcon type={"facebook"} size={"3xl"} glowy />
+                <SocialIcon type={"instagram"} size={"3xl"} glowy />
+                <SocialIcon type={"linkedin"} size={"3xl"} glowy />
+              </div>
             </div>
             <WhyUs />
           </div>
@@ -97,3 +111,27 @@ const Team = () => {
 };
 
 export default Team;
+
+const MemberInfo = ({ name, role, description }) => {
+  return (
+    <div className="mb-4">
+      <h3 className="font-bold text-xl border-l-2 border-lightGreen pl-4">
+        {name}
+      </h3>
+      <p className="font-extralight mb-2 pl-5">{role}</p>
+      <div
+        className="text-proseText"
+        dangerouslySetInnerHTML={{ __html: pnp(description) }}
+      ></div>
+    </div>
+  );
+};
+
+export async function getStaticProps() {
+  const members = await getTeamMembers();
+  return {
+    props: {
+      members,
+    },
+  };
+}

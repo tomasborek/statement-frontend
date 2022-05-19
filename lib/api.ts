@@ -24,3 +24,11 @@ export const getProjects = async () => {
   });
   return projects.items;
 };
+
+export const getTeamMembers = async () => {
+  const members = await client.getEntries({
+    content_type: "teamMember",
+    order: "fields.order",
+  });
+  return members.items;
+};
