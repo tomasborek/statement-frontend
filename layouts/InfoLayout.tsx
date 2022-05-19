@@ -107,12 +107,12 @@ const Expert = ({ name, description, img }) => {
         <h2 className="text-3xl text-center font-bold mb-4">
           Kdo vás projektem provede?
         </h2>
-        <p className="text-center text-proseText mb-2">
+        <p className="text-center text-proseText mb-4">
           Klikněte na avatara člena týmu a dozvíte se více.
         </p>
 
         <div className="flex justify-center">
-          <TeamMember name={name} description={description} img={img} />
+          <TeamMember name={name} description={description} img={img} active />
         </div>
       </section>
     </Link>
