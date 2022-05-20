@@ -36,11 +36,6 @@ const Team = ({ members }) => {
             <h1 className="relative px-4 mb-4 text-center text-5xl font-bold z-20">
               Tým Statement
             </h1>
-            {vw < 700 && (
-              <h3 className="text-xl opacity-40 text-proseText text-center mb-4">
-                Klikněte na člena
-              </h3>
-            )}
           </header>
           {/* Team people */}
           <motion.div className="relative overflow-hidden main-container">
@@ -50,13 +45,13 @@ const Team = ({ members }) => {
                   onClick={() => {
                     focus != 0 && setFocus((prevState) => prevState - 1);
                   }}
-                  className={`fa-solid fa-chevron-left ${
+                  className={`fa-solid fa-chevron-left text-2xl ${
                     focus === 0 ? "opacity-30" : ""
                   }`}
                 ></i>
                 <i
                   onClick={() => focus != 2 && setFocus((prev) => prev + 1)}
-                  className={`fa-solid fa-chevron-right ${
+                  className={`fa-solid fa-chevron-right text-2xl ${
                     focus === 2 ? "opacity-30" : ""
                   }`}
                 ></i>
@@ -69,7 +64,7 @@ const Team = ({ members }) => {
               initial={{ x: 0 }}
               animate={{
                 x:
-                  focus === 0 ? 0 : focus === 1 ? -200 : focus === 2 ? -500 : 0,
+                  focus === 0 ? 0 : focus === 1 ? -200 : focus === 2 ? -450 : 0,
               }}
               transition={{ duration: 0.5 }}
               className={`flex relative z-20 ${
@@ -81,18 +76,21 @@ const Team = ({ members }) => {
                 img={"pavel_team_holo.png"}
                 description={"Marketing manager"}
                 resize
+                {...(vw < 700 && focus === 0 && { active: true })}
               />
               <TeamMember
                 name={"Tomáš Bořek"}
                 img={"tomas_team_holo.png"}
                 description={"Developer"}
                 resize
+                {...(vw < 700 && focus === 1 && { active: true })}
               />
               <TeamMember
                 name={"Josef Hermoch"}
                 img={"joe_team_holo.png"}
                 description={"IT specialista"}
                 resize
+                {...(vw < 700 && focus === 2 && { active: true })}
               />
             </motion.div>
           </motion.div>
