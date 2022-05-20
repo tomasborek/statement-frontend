@@ -31,7 +31,7 @@ const Team = ({ members }) => {
       <div className="bg-bg min-h-screen text-white">
         <Header />
         {/* Bannner */}
-        <div className="relative pt-8 flex flex-col justify-between min-h-[600px] mb-8 green-gradient">
+        <div className="relative pt-8 flex flex-col justify-between md:min-h-[600px] mb-8 green-gradient">
           <header>
             <h1 className="relative px-4 mb-4 text-center text-5xl font-bold z-20">
               Tým Statement
@@ -59,18 +59,17 @@ const Team = ({ members }) => {
             )}
 
             <motion.div
-              // {...(vw < 700 ? { drag: "x" } : {})}
-              // dragConstraints={{ right: 0, left: -500 }}
               initial={{ x: 0 }}
               animate={{
                 x:
-                  focus === 0
-                    ? (vw - 250 - 16) / 2
+                  vw < 700 &&
+                  (focus === 0
+                    ? (vw - 250) / 2
                     : focus === 1
-                    ? (vw - 250 - 16) / 2 - 250
+                    ? (vw - 250) / 2 - 250
                     : focus === 2
-                    ? (vw - 250 - 16) / 2 - 500
-                    : 0,
+                    ? (vw - 250) / 2 - 500
+                    : 0),
               }}
               transition={{ duration: 0.5 }}
               className={`flex relative z-20 ${
@@ -81,34 +80,31 @@ const Team = ({ members }) => {
                 name={"Pavel Hašek"}
                 img={"pavel_team_holo.png"}
                 description={"Marketing manager"}
-                resize
                 {...(vw < 700
                   ? focus === 0
                     ? { active: true }
                     : { off: true }
-                  : "")}
+                  : { resize: true })}
               />
               <TeamMember
                 name={"Tomáš Bořek"}
                 img={"tomas_team_holo.png"}
                 description={"Developer"}
-                resize
                 {...(vw < 700
                   ? focus === 1
                     ? { active: true }
                     : { off: true }
-                  : "")}
+                  : { resize: true })}
               />
               <TeamMember
                 name={"Josef Hermoch"}
                 img={"joe_team_holo.png"}
                 description={"IT specialista"}
-                resize
                 {...(vw < 700
                   ? focus === 2
                     ? { active: true }
                     : { off: true }
-                  : "")}
+                  : { resize: true })}
               />
             </motion.div>
           </motion.div>
