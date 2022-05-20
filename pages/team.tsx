@@ -10,6 +10,7 @@ import { getTeamMembers } from "../lib/api";
 import { pnp } from "../lib/inputs";
 const Team = ({ members }) => {
   const [vw, setVw] = useState(0);
+  const [focus, setFocus] = useState(0);
   useEffect(() => {
     setVw(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -44,15 +45,33 @@ const Team = ({ members }) => {
           {/* Team people */}
           <motion.div className="relative overflow-hidden main-container">
             {vw < 700 && (
-              <div className="right-0 left-0 top-1/2 absolute flex justify-between text-lightGreen text-xl px-4 pointer-events-none">
-                <i className="fa-solid fa-chevron-left"></i>
-                <i className="fa-solid fa-chevron-right"></i>
+              <div className="right-0 z-30 left-0 top-1/2 absolute flex justify-between text-lightGreen text-xl px-4">
+                <i
+                  onClick={() => {
+                    focus != 0 && setFocus((prevState) => prevState - 1);
+                  }}
+                  className={`fa-solid fa-chevron-left ${
+                    focus === 0 ? "opacity-30" : ""
+                  }`}
+                ></i>
+                <i
+                  onClick={() => focus != 2 && setFocus((prev) => prev + 1)}
+                  className={`fa-solid fa-chevron-right ${
+                    focus === 2 ? "opacity-30" : ""
+                  }`}
+                ></i>
               </div>
             )}
 
             <motion.div
-              {...(vw < 700 ? { drag: "x" } : {})}
-              dragConstraints={{ right: 0, left: -500 }}
+              // {...(vw < 700 ? { drag: "x" } : {})}
+              // dragConstraints={{ right: 0, left: -500 }}
+              initial={{ x: 0 }}
+              animate={{
+                x:
+                  focus === 0 ? 0 : focus === 1 ? -200 : focus === 2 ? -500 : 0,
+              }}
+              transition={{ duration: 0.5 }}
               className={`flex relative z-20 ${
                 vw >= 700 ? "justify-center" : ""
               }`}
