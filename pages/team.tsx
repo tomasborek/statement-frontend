@@ -64,7 +64,13 @@ const Team = ({ members }) => {
               initial={{ x: 0 }}
               animate={{
                 x:
-                  focus === 0 ? 0 : focus === 1 ? -200 : focus === 2 ? -450 : 0,
+                  focus === 0
+                    ? (vw - 250 - 16) / 2
+                    : focus === 1
+                    ? (vw - 250 - 16) / 2 - 250
+                    : focus === 2
+                    ? (vw - 250 - 16) / 2 - 500
+                    : 0,
               }}
               transition={{ duration: 0.5 }}
               className={`flex relative z-20 ${
@@ -76,21 +82,33 @@ const Team = ({ members }) => {
                 img={"pavel_team_holo.png"}
                 description={"Marketing manager"}
                 resize
-                {...(vw < 700 && focus === 0 && { active: true })}
+                {...(vw < 700
+                  ? focus === 0
+                    ? { active: true }
+                    : { off: true }
+                  : "")}
               />
               <TeamMember
                 name={"Tomáš Bořek"}
                 img={"tomas_team_holo.png"}
                 description={"Developer"}
                 resize
-                {...(vw < 700 && focus === 1 && { active: true })}
+                {...(vw < 700
+                  ? focus === 1
+                    ? { active: true }
+                    : { off: true }
+                  : "")}
               />
               <TeamMember
                 name={"Josef Hermoch"}
                 img={"joe_team_holo.png"}
                 description={"IT specialista"}
                 resize
-                {...(vw < 700 && focus === 2 && { active: true })}
+                {...(vw < 700
+                  ? focus === 2
+                    ? { active: true }
+                    : { off: true }
+                  : "")}
               />
             </motion.div>
           </motion.div>
