@@ -59,7 +59,9 @@ body {
   display: none !important;
   -webkit-appearance: none;
 }
-
+video::-webkit-media-controls {
+  opacity: 0;
+}
 @media screen and (min-width: 768px) {
   .transparent-responsive-green-gradient {
     background: rgb(20, 117, 54);

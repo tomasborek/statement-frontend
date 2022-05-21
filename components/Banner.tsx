@@ -27,7 +27,6 @@ const Banner = ({ scrollToRef }) => {
   };
 
   const handleSuspend = () => {
-    alert("Pavel je krysa");
     setSuspended(true);
   };
 
@@ -56,7 +55,7 @@ const Banner = ({ scrollToRef }) => {
         playsInline
         ref={bannerContentRef}
         src="/video/planeta.mp4"
-        {...(!suspended ? { autoPlay: true } : "")}
+        {...(!suspended ? { autoPlay: true } : { autoPlay: false })}
         loop
         muted
         className="w-full h-3/4 md:h-full select-none object-cover absolute opacity-30 md:opacity-10 z-10"
