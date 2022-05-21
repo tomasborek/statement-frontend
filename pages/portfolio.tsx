@@ -39,34 +39,32 @@ const Portfolio = ({ projects }) => {
 
 const Project = ({ img, name, description, alternative, link }) => {
   return (
-    <Link href={link ? link : "/"} passHref>
-      <a target={"_blank"}>
+    <div
+      className={`flex flex-col justify-start md:justify-between mb-12 md:gap-8 items-center ${
+        alternative ? "md:flex-row-reverse" : "md:flex-row"
+      }`}
+    >
+      <div>
+        <h2 className="font-bold text-2xl mb-4">{name}</h2>
         <div
-          className={`flex flex-col justify-start md:justify-between mb-12 md:gap-8 items-center ${
-            alternative ? "md:flex-row-reverse" : "md:flex-row"
-          }`}
-        >
-          <div>
-            <h2 className="font-bold text-2xl mb-4">{name}</h2>
-            <div
-              className="text-proseText mb-4"
-              dangerouslySetInnerHTML={{
-                __html: pnp(description),
-              }}
-            ></div>
-            <NormalButton size="sm">Zobrazit projekt</NormalButton>
-          </div>
-          <div className="relative pb-4 w-full">
-            <img
-              src={img}
-              className="min-w-full md:min-w-[500px] h-[300px] object-cover rounded-lg relative z-20 mt-4 md:mt-0"
-              alt={name}
-            />
-            <div className="hidden md:block w-[500px] h-[300px] bg-grayBg rounded-lg absolute top-4 left-4 z-10"></div>
-          </div>
-        </div>
-      </a>
-    </Link>
+          className="text-proseText mb-4"
+          dangerouslySetInnerHTML={{
+            __html: pnp(description),
+          }}
+        ></div>
+        <NormalButton link={link} size="sm">
+          Zobrazit projekt
+        </NormalButton>
+      </div>
+      <div className="relative pb-4 w-full">
+        <img
+          src={img}
+          className="min-w-full md:min-w-[500px] h-[300px] object-cover rounded-lg relative z-20 mt-4 md:mt-0"
+          alt={name}
+        />
+        <div className="hidden md:block w-[500px] h-[300px] bg-grayBg rounded-lg absolute top-4 left-4 z-10"></div>
+      </div>
+    </div>
   );
 };
 Project.defaultProps = {
