@@ -27,6 +27,7 @@ const Banner = ({ scrollToRef }) => {
   };
 
   const handleSuspend = () => {
+    alert("Pavel je krysa");
     setSuspended(true);
   };
 
