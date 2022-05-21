@@ -1,4 +1,3 @@
-import { getEventListeners } from "events";
 import React, { useEffect, useRef, useState } from "react";
 //Components
 import GlowingButton from "./GlowingButton";
@@ -43,11 +42,10 @@ const Banner = ({ scrollToRef }) => {
           Služby
         </GlowingButton>
       </div>
-      {/* <div className="w-full absolute top-0 left-0 bottom-0 z-20 md:z-10 transparent-responsive-green-gradient"></div> */}
       <img
         ref={bannerContentRef}
         className="w-full h-full md:h-full select-none object-cover absolute opacity-10 z-10"
-        src="/video/planeta.webp"
+        src="/video/planeta.gif"
         alt=""
       />
     </div>
