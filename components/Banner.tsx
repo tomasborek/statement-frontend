@@ -1,5 +1,5 @@
 import { getEventListeners } from "events";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 //Components
 import GlowingButton from "./GlowingButton";
 import Logo from "./Logo";
@@ -7,21 +7,21 @@ import Logo from "./Logo";
 const Banner = ({ scrollToRef }) => {
   const bannerContentRef = useRef(null);
   useEffect(() => {
-    bannerContentRef.current.play();
-    const handleScroll = () => {
-      const offset = window.pageYOffset;
-      const bannerContent = bannerContentRef.current;
-
-      bannerContent
-        ? (bannerContent.style.transform = `translateY(${offset * 0.5}px)`)
-        : "";
-    };
     window.addEventListener("scroll", handleScroll);
     return () => {
       console.log("Removing event listener");
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleScroll = () => {
+    const offset = window.pageYOffset;
+    const bannerContent = bannerContentRef.current;
+
+    bannerContent
+      ? (bannerContent.style.transform = `translateY(${offset * 0.5}px)`)
+      : "";
+  };
 
   return (
     <div className="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden bg-black">
