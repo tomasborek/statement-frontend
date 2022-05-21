@@ -46,7 +46,11 @@ const Kontakt = () => {
                 size={"2xl"}
                 link="https://www.instagram.com/statements.cz/"
               />
-              <SocialIcon type={"linkedin"} size={"2xl"} />
+              <SocialIcon
+                link={"https://www.linkedin.com/company/86135628"}
+                type={"linkedin"}
+                size={"2xl"}
+              />
             </div>
 
             <NormalButton

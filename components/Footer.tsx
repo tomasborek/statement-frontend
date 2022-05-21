@@ -14,13 +14,10 @@ const Footer = () => {
           <div className="flex-1">
             <h3 className="font-bold mb-2">O statements</h3>
             <p className="text-sm text-proseText">
-              Naše práce je zároveň i náš koníček, proto se vše snažíme
-              dotáhnout do detailu a hlavně tak, abyste Vy byli maximálně
-              spokojeni. Jsme mladí kluci a na vše se díváme moderním a trendy
-              stylem - z on-line světa nám nic neunikne! S náročnějšími problémy
-              se radíme s experty napříč celým profesním polem. Zkuste nám dát
-              šanci a můžeme si společně a nezavázně promluvit o Vašich ambicích
-              a cílech.
+              Jsme mladý tým zabývající se (nejen) digitálním marketingem a
+              vývojem webů. Vytváříme webové aplikace a projekty, které mají
+              smysl. Na vše se díváme moderním a trendy stylem, z online světa
+              nám nic neunikne. Vize jsou nekonečné, pojďte je s námi naplnit.
             </p>
           </div>
           <div className="flex flex-col md:items-center flex-1">
@@ -45,7 +42,11 @@ const Footer = () => {
                 size="xl"
                 link={"https://www.instagram.com/statements.cz/"}
               />
-              <SocialIcon type="linkedin" size="xl" />
+              <SocialIcon
+                link={"https://www.linkedin.com/company/86135628"}
+                type="linkedin"
+                size="xl"
+              />
             </div>
             <div className="flex items-center space-x-4 transition-all hover:text-lightGreen cursor-pointer">
               <i className="fas fa-phone"></i>
