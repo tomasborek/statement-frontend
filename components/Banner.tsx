@@ -18,7 +18,7 @@ const Banner = ({ scrollToRef }) => {
     const bannerContent = bannerContentRef.current;
 
     bannerContent
-      ? (bannerContent.style.transform = `translateY(${offset * 0.5}px)`)
+      ? (bannerContent.style.transform = `translateY(${offset * 0.35}px)`)
       : "";
   };
 
@@ -44,9 +44,9 @@ const Banner = ({ scrollToRef }) => {
       </div>
       <img
         ref={bannerContentRef}
-        className="w-full h-full md:h-full select-none object-cover absolute opacity-10 z-10"
-        src="/video/planeta.gif"
-        alt=""
+        className="w-full h-full md:h-full select-none object-cover opacity-10 z-10 absolute"
+        src="/video/planeta.webp"
+        alt="Banner"
       />
     </div>
   );
