@@ -34,7 +34,7 @@ const Team = ({ members }) => {
         <div className="relative pt-8 flex flex-col justify-between md:min-h-[600px] mb-8 green-gradient">
           <header>
             <h1 className="relative px-4 mb-4 text-center text-5xl font-bold z-20">
-              Tým Statement
+              Tým Statements
             </h1>
           </header>
           {/* Team people */}
@@ -64,11 +64,11 @@ const Team = ({ members }) => {
                 x:
                   vw < 700 &&
                   (focus === 0
-                    ? (vw - 250) / 2
+                    ? (vw - 250) / 2 - 16
                     : focus === 1
-                    ? (vw - 250) / 2 - 250
+                    ? (vw - 250) / 2 - 250 - 16
                     : focus === 2
-                    ? (vw - 250) / 2 - 500
+                    ? (vw - 250) / 2 - 500 - 16
                     : 0),
               }}
               transition={{ duration: 0.5 }}
