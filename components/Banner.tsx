@@ -6,11 +6,14 @@ import Logo from "./Logo";
 
 const Banner = ({ scrollToRef }) => {
   const bannerContentRef = useRef(null);
+  const [suspended, setSuspended] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    bannerContentRef.current.addEventListener("suspend", handleSuspend);
     return () => {
       console.log("Removing event listener");
       window.removeEventListener("scroll", handleScroll);
+      bannerContentRef.current.removeEventListener("suspend", handleSuspend);
     };
   }, []);
 
@@ -23,10 +26,14 @@ const Banner = ({ scrollToRef }) => {
       : "";
   };
 
+  const handleSuspend = () => {
+    setSuspended(true);
+  };
+
   return (
     <div className="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden bg-black">
       <div className="relative z-20 w-full flex flex-col items-center justify-center flex-1">
-        <div className="relative w-full px-4 mb-8 flex justify-center">
+        <div className="relative w-full px-4 my-8 flex justify-center">
           <Logo width={400} />
         </div>
         <h1 className="text-5xl text-center mb-4">Vize jsou nekonečné</h1>
@@ -48,7 +55,7 @@ const Banner = ({ scrollToRef }) => {
         playsInline
         ref={bannerContentRef}
         src="/video/planeta.mp4"
-        autoPlay
+        {...(!suspended ? { autoPlay: true } : "")}
         loop
         muted
         className="w-full h-3/4 md:h-full select-none object-cover absolute opacity-30 md:opacity-10 z-10"
