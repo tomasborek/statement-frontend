@@ -51,15 +51,12 @@ const Banner = ({ scrollToRef }) => {
         </GlowingButton>
       </div>
       <div className="w-full absolute top-0 left-0 bottom-0 z-20 md:z-10 transparent-responsive-green-gradient"></div>
-      <video
-        playsInline
+      <img
         ref={bannerContentRef}
-        src="/video/planeta.mp4"
-        {...(!suspended ? { autoPlay: true } : { autoPlay: false })}
-        loop
-        muted
-        className="w-full h-3/4 md:h-full select-none object-cover absolute opacity-30 md:opacity-10 z-10"
-      ></video>
+        className="w-full h-full md:h-full select-none object-cover absolute opacity-30 md:opacity-10 z-10"
+        src="/video/planeta.webp"
+        alt=""
+      />
     </div>
   );
 };
