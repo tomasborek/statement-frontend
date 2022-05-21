@@ -7,6 +7,7 @@ import Logo from "./Logo";
 const Banner = ({ scrollToRef }) => {
   const bannerContentRef = useRef(null);
   useEffect(() => {
+    bannerContentRef.current.play();
     const handleScroll = () => {
       const offset = window.pageYOffset;
       const bannerContent = bannerContentRef.current;
