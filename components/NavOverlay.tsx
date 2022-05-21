@@ -9,7 +9,7 @@ const NavOverlay = () => {
         open
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
-      } top-0 bottom-0 w-full text-white z-30 transition-all overflow-hidden`}
+      } top-0 bottom-0 w-full text-white z-40 transition-all overflow-hidden`}
     >
       <div className="green-gradient absolute top-0 bottom-0 w-full z-10"></div>
       <div className="flex justify-center items-center relative h-screen z-20">
