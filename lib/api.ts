@@ -32,3 +32,11 @@ export const getTeamMembers = async () => {
   });
   return members.items;
 };
+
+export const getReferences = async () => {
+  const references = await client.getEntries({
+    content_type: "reference",
+    order: "fields.name",
+  });
+  return references.items;
+};
