@@ -53,9 +53,10 @@ const Banner = ({ scrollToRef }) => {
           Služby
         </GlowingButton>
       </div>
-      <div className="absolute w-full top-0 bottom-0 transparent-responsive-green-gradient z-20"></div>
+      <div className="absolute w-full top-0 bottom-0 transparent-responsive-green-gradient z-20 md:z-10"></div>
       {videoError ? (
         <img
+          ref={video}
           src="/img/planeta_placeholder.png"
           className="w-full h-2/3 md:h-full select-none object-cover opacity-30 md:opacity-10 z-10 absolute"
           alt="Planeta"
@@ -66,7 +67,7 @@ const Banner = ({ scrollToRef }) => {
           muted
           playsInline
           ref={video}
-          className="w-full h-2/3 md:h-full select-none object-cover opacity-30 md:opacity-10 z-10 absolute"
+          className="w-full h-2/3 md:h-full select-none object-cover opacity-30 md:opacity-10 z-10 md:z-20 absolute"
           src="/video/planeta.mp4"
         />
       )}
