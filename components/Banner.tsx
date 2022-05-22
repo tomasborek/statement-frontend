@@ -57,7 +57,7 @@ const Banner = ({ scrollToRef }) => {
         playsInline
         ref={video}
         className="w-full h-2/3 md:h-full select-none object-cover opacity-30 md:opacity-10 z-10 absolute"
-        src="/video/planeta.webm"
+        src="/video/planeta.mp4"
       />
     </div>
   );
