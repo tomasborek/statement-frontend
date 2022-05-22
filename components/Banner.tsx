@@ -66,6 +66,7 @@ const Banner = ({ scrollToRef }) => {
           autoPlay
           muted
           playsInline
+          loop
           ref={video}
           className="w-full h-2/3 md:h-full select-none object-cover opacity-30 md:opacity-10 z-10 md:z-20 absolute"
           src="/video/planeta.mp4"
