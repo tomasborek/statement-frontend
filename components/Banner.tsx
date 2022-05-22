@@ -5,15 +5,18 @@ import Logo from "./Logo";
 
 const Banner = ({ scrollToRef }) => {
   const video = useRef(null);
+  const [videoError, setVideoError] = useState(false);
   useEffect(() => {
-    video.current
-      .play()
-      .then((response) => {
-        //Success
-      })
-      .catch((error) => {
-        video.current.pause();
-      });
+    if (video.current) {
+      video.current
+        .play()
+        .then((response) => {
+          //Success
+        })
+        .catch((error) => {
+          setVideoError(true);
+        });
+    }
     window.addEventListener("scroll", handleScroll);
     return () => {
       console.log("Removing event listener");
@@ -51,14 +54,22 @@ const Banner = ({ scrollToRef }) => {
         </GlowingButton>
       </div>
       <div className="absolute w-full top-0 bottom-0 transparent-responsive-green-gradient z-20"></div>
-      <video
-        autoPlay
-        muted
-        playsInline
-        ref={video}
-        className="w-full h-2/3 md:h-full select-none object-cover opacity-30 md:opacity-10 z-10 absolute"
-        src="/video/planeta.mp4"
-      />
+      {videoError ? (
+        <img
+          src="/img/planeta_placeholder.png"
+          className="w-full h-2/3 md:h-full select-none object-cover opacity-30 md:opacity-10 z-10 absolute"
+          alt="Planeta"
+        />
+      ) : (
+        <video
+          autoPlay
+          muted
+          playsInline
+          ref={video}
+          className="w-full h-2/3 md:h-full select-none object-cover opacity-30 md:opacity-10 z-10 absolute"
+          src="/video/planeta.mp4"
+        />
+      )}
     </div>
   );
 };
