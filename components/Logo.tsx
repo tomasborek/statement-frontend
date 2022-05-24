@@ -24,7 +24,7 @@ const Logo = ({
       });
     }
   }, []);
-  if (glowing && !videoError) {
+  if (glowing) {
     return (
       <video
         ref={video}
