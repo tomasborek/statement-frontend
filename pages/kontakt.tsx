@@ -63,11 +63,26 @@ const Kontakt = () => {
           </div>
           <div
             ref={formRef}
-            className="bg-grayBg rounded-lg p-8 flex flex-col items-center"
+            className="bg-grayBg rounded-lg p-8 flex flex-col items-center mb-8"
           >
             <i className="far fa-envelope-open text-lightGreen text-5xl mb-2"></i>
             <h2 className="text-3xl mb-4">Napište nám</h2>
             <ContactForm />
+          </div>
+          <div
+            ref={formRef}
+            className="bg-grayBg rounded-lg p-8 flex flex-col items-center"
+          >
+            <i className="far fa-id-card text-lightGreen text-5xl mb-2"></i>
+            <h2 className="text-3xl mb-4">Fakturační údaje</h2>
+            <p>
+              <b>Pavel Hašek</b>
+            </p>
+            <p>
+              <b>IČ: 14218038</b>
+            </p>
+            <p>Praha</p>
+            <p>Česká Republika</p>
           </div>
           <WhyUs />
         </div>
