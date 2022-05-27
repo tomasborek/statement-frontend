@@ -46,8 +46,8 @@ const Reference = ({ name, img, category, link }) => {
       onMouseLeave={() => setHover(false)}
       className="m-4 relative cursor-pointer group bg-bg rounded-lg overflow-hidden"
     >
-      <Link href={link} passHref>
-        <a target={"_blank"}>
+      <Link href={link ? link : "/reference"} passHref>
+        <a {...(link && { target: "_blank" })}>
           <img
             className="min-w-full min-h-full rounded-lg z-10"
             src={img}

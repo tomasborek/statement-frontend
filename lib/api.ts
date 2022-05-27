@@ -36,7 +36,7 @@ export const getTeamMembers = async () => {
 export const getReferences = async () => {
   const references = await client.getEntries({
     content_type: "reference",
-    order: "fields.name",
+    order: "fields.order",
   });
   return references.items;
 };
