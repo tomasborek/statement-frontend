@@ -17,7 +17,7 @@ const InfoLayout = ({ content }) => {
     expert,
     checkListTitle,
     checkListDescription,
-    checkListFields,
+    checkList,
     bannerItems,
   } = content.fields;
   return (
@@ -52,13 +52,13 @@ const InfoLayout = ({ content }) => {
               ))}
             </div>
           </section>
-          {checkListFields && (
+          {checkList && (
             <section className="my-12 ">
               <h2 className="font-bold text-3xl text-center mb-4">
                 {checkListTitle}
               </h2>
               <ul className="flex flex-col items-center space-y-4 list-none p-0">
-                {checkListFields.items.map((item, index) => (
+                {checkList.map((item, index) => (
                   <Step key={index}>{item}</Step>
                 ))}
               </ul>
