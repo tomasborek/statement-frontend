@@ -34,8 +34,8 @@ const Banner = ({ scrollToRef }) => {
   };
 
   return (
-    <div className="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden bg-black z-20">
-      <div className="relative z-40 w-full flex flex-col items-center justify-center flex-1">
+    <div className="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden bg-black md:bg-bg z-20">
+      <div className="relative z-50 w-full flex flex-col items-center justify-center flex-1">
         <div className="relative w-5/6 max-w-[400px] px-4 flex justify-center">
           <Logo width={"100%"} glowing opacity={100} />
         </div>
@@ -53,7 +53,7 @@ const Banner = ({ scrollToRef }) => {
           Služby
         </GlowingButton>
       </div>
-      <div className="absolute w-full top-0 bottom-0 transparent-responsive-green-gradient z-30 md:z-10"></div>
+      <div className="absolute w-full top-0 bottom-0 transparent-green-gradient z-30 md:z-20"></div>
       <div className="absolute w-full top-0 bottom-0 bg-bg z-20 opacity-50 md:hidden pointer-events-none"></div>
       {videoError ? (
         <img
@@ -69,7 +69,7 @@ const Banner = ({ scrollToRef }) => {
           playsInline
           loop
           ref={video}
-          className="w-full h-2/3 md:h-full select-none object-cover opacity-30 md:opacity-10 z-10 md:z-20 absolute"
+          className="w-full h-2/3 md:h-full select-none object-cover opacity-30 md:opacity-10 z-10 absolute"
           src="/video/planeta.mp4"
         />
       )}
