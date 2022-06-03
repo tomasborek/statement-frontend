@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 //Components
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -18,7 +18,7 @@ const References = ({ references }) => {
         <Header />
         <LogoHeading>Reference</LogoHeading>
         <div className="min-h-screen main-container">
-          <div className="sm:grid grid-cols-2 md:grid-cols-3">
+          <div className="space-y-4 sm:space-y-0 sm:gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3">
             {references.map((reference, index) => (
               <Reference
                 name={reference.fields.name}
@@ -39,13 +39,8 @@ const References = ({ references }) => {
 export default References;
 
 const Reference = ({ name, img, category, link }) => {
-  const [hover, setHover] = useState(false);
   return (
-    <div
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      className="m-4 relative cursor-pointer group bg-bg rounded-lg overflow-hidden"
-    >
+    <div className="relative cursor-pointer group bg-bg rounded-lg overflow-hidden w-full min-h-[200px]">
       <Link href={link ? link : "/reference"} passHref>
         <a {...(link && { target: "_blank" })}>
           <img
