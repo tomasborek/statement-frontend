@@ -23,6 +23,17 @@ function MyApp({ Component, pageProps }) {
           type="image/x-icon"
           href="/img/logo/osmicka.svg"
         ></link>
+        <meta
+          name="description"
+          content="Jsme mladý tým zabývající se (nejen) digitálním marketingem a
+              vývojem webů. Vytváříme webové aplikace a projekty, které mají
+              smysl. Na vše se díváme moderním a trendy stylem, z online světa
+              nám nic neunikne. Vize jsou nekonečné, pojďte je s námi naplnit."
+        ></meta>
+        <meta
+          name="keywords"
+          content="statements, digitální marketing, mediál, webové stránky, tvorba webu, tvorba stránek, tvorba grafiky, grafika, IT služby, chci web"
+        ></meta>
       </Head>
       <NavProvider>
         <LayoutWrapper>
