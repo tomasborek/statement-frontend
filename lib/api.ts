@@ -40,3 +40,11 @@ export const getReferences = async () => {
   });
   return references.items;
 };
+
+export const getTechnologies = async () => {
+  const technologies = await client.getEntries({
+    content_type: "technology",
+    order: "fields.order",
+  });
+  return technologies.items;
+};
