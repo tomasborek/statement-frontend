@@ -32,11 +32,12 @@ const Technologies = ({ technologies }) => {
       </div>
       {view == "dev" && (
         <div className="mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-10">
             {technologies.map((technology, index) => (
               <>
                 {technology.fields.category == "dev" && (
                   <Technology
+                    key={index}
                     title={technology.fields.title}
                     image={technology.fields.image.fields.file.url}
                   />
@@ -48,12 +49,13 @@ const Technologies = ({ technologies }) => {
       )}
       {view == "marketing" && (
         <div className="mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-10">
             {technologies.map((technology, index) => (
               <>
                 {(technology.fields.category == "design" ||
                   technology.fields.category == "marketing") && (
                   <Technology
+                    key={index}
                     title={technology.fields.title}
                     image={technology.fields.image.fields.file.url}
                   />
@@ -71,11 +73,13 @@ export default Technologies;
 
 const Technology = ({ image, title }) => (
   <div className="flex flex-col items-center">
-    <img
-      src={image}
-      alt={title}
-      className="brightness-0 invert-[1] p-8 aspect-square"
-    />
+    <div className="p-8 aspect-square">
+      <img
+        src={image}
+        alt={title}
+        className="brightness-0 invert-[1] w-full h-full"
+      />
+    </div>
     <p className="text-center">{title}</p>
   </div>
 );
